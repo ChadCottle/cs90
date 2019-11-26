@@ -6,8 +6,8 @@ ssh-keygen -C *email address*  <br/>
 ls ~/.ssh <br/>
 cat ~/.ssh/id_rsa.pub <br/>
 <br/> 
-ssh-add KEPT GETTING ERRORS so i found the solution (next two steps) here:<br/> 
-https://coderwall.com/p/rdi_wq/fix-could-not-open-a-connection-to-your-authentication-agent-when-using-ssh-add <br/> 
+ssh-add KEPT GETTING ERRORS so i found the solution (next two steps) here:<br/>
+https://coderwall.com/p/rdi_wq/fix-could-not-open-a-connection-to-your-authentication-agent-when-using-ssh-add <br/>
 `ssh-agent` <br/>
 `eval $(ssh-agent)` <br/>
 `ssh-add` <br/>
