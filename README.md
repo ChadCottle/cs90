@@ -1,8 +1,8 @@
-**This is the cs90 final project repository**
+**This is the cs90 final project repository** <br/>
 Commands used so far: <br/>
 mkdir final <br/>
 cd final <br/>
-ssh-keygen -C cottle.chad@yahoo.com <br/>
+ssh-keygen -C *email address*  <br/>
 ls ~/.ssh <br/>
 cat ~/.ssh/id_rsa.pub <br/>
 <br/> 
