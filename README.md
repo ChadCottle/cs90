@@ -22,4 +22,11 @@ git add . <br/>
 git status <br/>
 git commit -m "First commit" <br/> 
 git push<br/>
+<br/>
+
+**Create an AWS user with Programatic Access**<br/>
+install awscli <br/>
+`aws configure` from an ec2 instance or your local machine <br/>
+
+
 
