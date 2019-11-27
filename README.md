@@ -27,6 +27,7 @@ Install git using:  `sudo git install -y`<br/>
 Then initialize git:  `git init`<br/>
 
 Then configure git:
+
 `$ git config --global user.name "John Doe"`<br/>
 `$ git config --global user.email johndoe@example.com`<br/>
 
@@ -48,10 +49,5 @@ git status <br/>
 git commit -m "First commit" <br/> 
 git push<br/>
 <br/>
-
-**Create an AWS user with Programatic Access**<br/>
-install awscli <br/>
-`aws configure` from an ec2 instance or your local machine <br/>
-
 
 
