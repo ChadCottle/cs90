@@ -47,7 +47,7 @@ git status <br/>
 git commit -m "First commit" <br/> 
 git push<br/>
 <br/>
-## Code Deploy and Code Pipeline<br/>
+## Create Roles first<br/>
 
 First we will create some IAM roles.<br/>
 We need a role for our ec2 instance(s) and a role for the Code Deploy service.<br/>
@@ -65,7 +65,7 @@ Attach the following policy:<br/>
 
 ## Create our initial ec2 instance that will run our web application<br/>
 Choose a region that will run an instance as well as CD and CP<br/>
-Launch a simple aws linux app with in a VPC’s public subnet<br/>
+Launch a simple aws linux app within a VPC’s public subnet<br/>
 Auto-assign a public IP<br/>
 Choose our IAM role that was created earlier for instances: *CDInstanceRole*<br/>
 
@@ -80,3 +80,10 @@ Under Advanced Details add the following in the user data section:<br/>
 `sudo ./install auto`<br/>
 `sudo service httpd start`<br/>
 `sudo chkconfig httpd on`<br/>
+
+Here’s what is going on with the user data section.  We are doing a standard update followed by installing apache (httpd).
+We then install ruby and wget the codedeploy agent and codedeploy resource kit from a bucket in our region. The bucket choices are listed here:  https://docs.aws.amazon.com/codedeploy/latest/userguide/resource-kit.html#resource-kit-bucket-names
+Then we make it executable and install it.  And lastly we are starting Apache and setting it to come back up after a reboot.<br/>
+
+## Code Deploy and Code Pipeline<br/>
+
