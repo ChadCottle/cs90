@@ -49,7 +49,7 @@ git push<br/>
 <br/>
 
 <br/>
-# Code Deploy and Code Pipeline
+## Code Deploy and Code Pipeline<br/>
 
 First we will create some IAM roles.<br/>
 We need a role for our ec2 instance(s) and a role for the Code Deploy service.<br/>
@@ -63,4 +63,4 @@ AutoScalingNotificationAccessRole<br/>
 Attach the following policy:<br/>
 AWSCodeDeployRole<br/>
 **Note:** on the Trust Relationship tab you will need to edit this line:<br/>
-`”Service": “ec2.amazonaws.com”` and change it to the following: `codedeploy.amazonaws.com<br/>
+`”Service": “ec2.amazonaws.com”` and change it to the following: `”Service": “codedeploy.amazonaws.com"`<br/>
