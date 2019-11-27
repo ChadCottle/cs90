@@ -1,8 +1,8 @@
-#This is the cs90 final project repository <br/>
+# This is the cs90 final project repository <br/>
 
 **Install and configure git**<br/>
 For this project I launched an aws linux ec2 instance and sshed to it.<br/>
-
+Note: this could be installed locally on a mac or windows machine.<br/>
 mkdir final <br/>
 cd final <br/>
 <br/>
@@ -48,4 +48,19 @@ git commit -m "First commit" <br/>
 git push<br/>
 <br/>
 
+<br/>
+# Code Deploy and Code Pipeline
 
+First we will create some IAM roles.<br/>
+We need a role for our ec2 instance(s) and a role for the Code Deploy service.<br/>
+
+1. Create a role called CDInstanceRole<br/>
+Attach the following policies:<br/>
+AmazonEC2RoleforAWSCodeDeploy<br/>
+AutoScalingNotificationAccessRole<br/>
+
+2. Create a role called CDServiceRole
+Attach the following policy:<br/>
+AWSCodeDeployRole<br/>
+**Note:** on the Trust Relationship tab you will need to edit this line:<br/>
+`”Service": “ec2.amazonaws.com”` and change it to the following: `codedeploy.amazonaws.com<br/>
