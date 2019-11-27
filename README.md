@@ -63,4 +63,22 @@ AutoScalingNotificationAccessRole<br/>
 Attach the following policy:<br/>
 AWSCodeDeployRole<br/>
 **Note:** on the Trust Relationship tab you will need to edit this line:<br/>
-`”Service": “ec2.amazonaws.com”` and change it to the following: `”Service": “codedeploy.amazonaws.com"`<br/>
+`”Service": “ec2.amazonaws.com”` and change it to the following: `”Service": “codedeploy.amazonaws.com"`<br>
+
+## Create our initial ec2 instance that will run our web application<br/>
+Choose a region that will run an instance as well as CD and CP<br/>
+Launch a simple aws linux app with in a VPC’s public subnet<br/>
+Auto-assign a public IP<br/>
+Choose our IAM role that was created earlier for instances: *CDInstanceRole*<br/>
+
+
+Under Advanced Details add the following in the user data section:<br/>
+`#!/bin/bash`<br/>
+`sudo yum update -y`<br/>
+`sudo yum install httpd -y`<br/>
+`sudo yum install ruby -y`<br/>
+`wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install`<br/>
+`chmod +x ./install`<br/>
+`sudo ./install auto`<br/>
+`sudo service httpd start`<br/>
+`sudo chkconfig httpd on`<br/>
