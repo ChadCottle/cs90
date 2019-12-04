@@ -80,6 +80,9 @@ Under Advanced Details add the following in the user data section:<br/>
 `sudo service httpd start`<br/>
 `sudo chkconfig httpd on`<br/>
 
+**Note:** Link to [userdata.txt](https://github.com/ChadCottle/cs90/blob/master/userdata.txt)
+
+
 Here’s what is going on with the user data section.  We are doing a standard update followed by installing apache (httpd).
 We then install ruby and wget the codedeploy agent and codedeploy resource kit from a bucket in our region. The bucket choices are listed [here.](https://docs.aws.amazon.com/codedeploy/latest/userguide/resource-kit.html#resource-kit-bucket-names)
 Then we make it executable and install it.  And lastly we are starting Apache and setting it to come back up after a reboot.<br/>
