@@ -12,8 +12,7 @@ ssh-keygen -C *email address*  <br/>
 ls ~/.ssh <br/>
 cat ~/.ssh/id_rsa.pub <br/>
 <br/> 
-`ssh-add` KEPT GETTING ERRORS so i found the solution (next two steps) here:<br/>
-https://coderwall.com/p/rdi_wq/fix-could-not-open-a-connection-to-your-authentication-agent-when-using-ssh-add <br/>
+`ssh-add` KEPT GETTING ERRORS so i found the solution (next two steps) [here:](https://coderwall.com/p/rdi_wq/fix-could-not-open-a-connection-to-your-authentication-agent-when-using-ssh-add) <br/>
 <br/>
 `ssh-agent` <br/>
 `eval $(ssh-agent)` <br/>
@@ -82,7 +81,7 @@ Under Advanced Details add the following in the user data section:<br/>
 `sudo chkconfig httpd on`<br/>
 
 Here’s what is going on with the user data section.  We are doing a standard update followed by installing apache (httpd).
-We then install ruby and wget the codedeploy agent and codedeploy resource kit from a bucket in our region. The bucket choices are listed [here!] (https://docs.aws.amazon.com/codedeploy/latest/userguide/resource-kit.html#resource-kit-bucket-names)
+We then install ruby and wget the codedeploy agent and codedeploy resource kit from a bucket in our region. The bucket choices are listed [here.](https://docs.aws.amazon.com/codedeploy/latest/userguide/resource-kit.html#resource-kit-bucket-names)
 Then we make it executable and install it.  And lastly we are starting Apache and setting it to come back up after a reboot.<br/>
 
 ## Code Deploy and Code Pipeline<br/>
@@ -94,4 +93,4 @@ Here is where we get into the meet of our project.  We will follow these general
 
 3. Create a *deployment*
 
-Before starting we need to create a [Personal Access Token!](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) in our github.com account. 
+Before starting we need to create a [Personal Access Token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) in our github.com account. 
