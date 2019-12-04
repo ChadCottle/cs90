@@ -88,9 +88,7 @@ Then we make it executable and install it.  And lastly we are starting Apache an
 <br/>
 Here is where we get into the meet of our project.  We will follow these general steps for **Code Deploy**<br/>
 1. Create an *application*
-
 2. Create a *deployment group*
-
 3. Create a *deployment*
 
 Before starting we need to create a [Personal Access Token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) in our github.com account. 
