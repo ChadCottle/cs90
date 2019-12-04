@@ -82,14 +82,16 @@ Under Advanced Details add the following in the user data section:<br/>
 `sudo chkconfig httpd on`<br/>
 
 Here’s what is going on with the user data section.  We are doing a standard update followed by installing apache (httpd).
-We then install ruby and wget the codedeploy agent and codedeploy resource kit from a bucket in our region. The bucket choices are listed [here] (https://docs.aws.amazon.com/codedeploy/latest/userguide/resource-kit.html#resource-kit-bucket-names)
+We then install ruby and wget the codedeploy agent and codedeploy resource kit from a bucket in our region. The bucket choices are listed [here!] (https://docs.aws.amazon.com/codedeploy/latest/userguide/resource-kit.html#resource-kit-bucket-names)
 Then we make it executable and install it.  And lastly we are starting Apache and setting it to come back up after a reboot.<br/>
 
 ## Code Deploy and Code Pipeline<br/>
 <br/>
 Here is where we get into the meet of our project.  We will follow these general steps for **Code Deploy**<br/>
 1. Create an *application*
+
 2. Create a *deployment group*
+
 3. Create a *deployment*
 
-Before starting we need to create a [Personal Access Token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) in our github.com account. 
+Before starting we need to create a [Personal Access Token!](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) in our github.com account. 
