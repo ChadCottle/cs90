@@ -54,7 +54,7 @@ We need a role for our ec2 instance(s) and a role for the Code Deploy service.<b
 1. Create a role called CDInstanceRole<br/>
 Attach the following policies:<br/>
 **AmazonEC2RoleforAWSCodeDeploy**<br/>
-**AutoScalingNotificationAccessRole<br/>**
+**AutoScalingNotificationAccessRole**<br/>
 
 2. Create a role called CDServiceRole
 Attach the following policy:<br/>
@@ -92,3 +92,6 @@ Here is where we get into the meet of our project.  We will follow these general
 3. Create a **deployment** <br/>
 
 Before starting we need to create a [Personal Access Token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) in our github.com account. 
+
+For this section we will also use the **AWSCodeDeployRole** we created earlier.
+
