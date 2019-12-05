@@ -95,7 +95,6 @@ Here is where we get into the meet of our project.  We will follow these general
 2. Create a **deployment group**
 3. Create a **deployment**
 
-Before starting we need to create a [Personal Access Token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) in our github.com account. 
 
 For this section we will also use the **AWSCodeDeployRole** we created earlier.
 
